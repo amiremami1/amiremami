@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>امیرمحمد امامی | دانشجوی مدیریت مالی</title>
+<meta name="description" content="وبلاگ شخصی امیرمحمد امامی، دانشجوی مدیریت مالی؛ یادداشت‌هایی درباره‌ی بازارهای مالی، سرمایه‌گذاری و تجربه‌ی دانشجویی.">
+<meta property="og:title" content="امیرمحمد امامی | دانشجوی مدیریت مالی">
+<meta property="og:description" content="وبلاگ شخصی امیرمحمد امامی، دانشجوی مدیریت مالی؛ یادداشت‌هایی درباره‌ی بازارهای مالی و سرمایه‌گذاری.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1224;
+    --bg-raised:#0f1c36;
+    --ink:#eef1f7;
+    --ink-soft:#a3b0c9;
+    --ink-faint:#67739c;
+    --line:#1c2a4a;
+    --brass:#c6a15b;
+    --brass-soft:#8f7640;
+    --navy-accent:#3a5fc4;
+    --max:760px;
+    --serif:'Noto Serif', serif;
+    --sans:'Vazirmatn', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.9;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--ink); text-decoration:none;}
+  a:hover{color:var(--brass);}
+  a:focus-visible, button:focus-visible{outline:1px solid var(--brass); outline-offset:4px;}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  /* ---- top bar ---- */
+  .topbar{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(15,28,54,0.6), rgba(10,18,36,0));
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+    z-index:10;
+  }
+  .topbar-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:22px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+  }
+  .brand{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:0.02em;
+    color:var(--ink);
+  }
+  nav.tabs{
+    display:flex;
+    gap:28px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  nav.tabs a{color:var(--ink-soft);}
+  nav.tabs a:hover{color:var(--brass);}
+
+  /* ---- hero ---- */
+  header.hero{
+    padding:110px 0 90px;
+    text-align:center;
+    background:radial-gradient(60% 55% at 50% 0%, rgba(58,95,196,0.18), rgba(58,95,196,0) 70%);
+  }
+  .eyebrow-line{
+    width:36px;
+    height:1px;
+    background:var(--brass);
+    margin:0 auto 28px;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(38px, 6vw, 56px);
+    margin:0 0 18px;
+    color:var(--ink);
+    letter-spacing:0.01em;
+  }
+  .role{
+    font-size:16px;
+    color:var(--ink-soft);
+    letter-spacing:0.03em;
+    margin:0;
+  }
+  .role .dot{color:var(--brass); margin:0 10px;}
+
+  section{padding:70px 0; border-top:1px solid var(--line);}
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:34px;
+  }
+  h2.section-title{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:24px;
+    margin:0;
+    color:var(--ink);
+  }
+
+  /* ---- about ---- */
+  .about p{max-width:62ch; color:var(--ink-soft); margin:0 0 18px; font-weight:300;}
+  .about p:last-child{margin-bottom:0;}
+  .about p strong{color:var(--ink); font-weight:500;}
+
+  /* ---- education/skills ---- */
+  .edu-item{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .edu-item:first-of-type{border-top:none; padding-top:0;}
+  .edu-item .what{font-weight:500; color:var(--ink);}
+  .edu-item .when{color:var(--ink-faint); font-size:14px; white-space:nowrap;}
+
+  .skills{margin-top:32px; display:flex; flex-wrap:wrap; gap:10px 14px;}
+  .skill{
+    font-size:13px;
+    color:var(--ink-soft);
+    padding:7px 14px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:var(--bg-raised);
+  }
+
+  /* ---- blog ---- */
+  .post{
+    padding:26px 28px;
+    margin:0 0 18px;
+    background:var(--bg-raised);
+    border:1px solid var(--line);
+    border-radius:6px;
+    transition:border-color .2s ease;
+  }
+  .post:last-of-type{margin-bottom:0;}
+  .post:hover{border-color:var(--brass-soft);}
+  .post-date{font-size:12px; letter-spacing:0.04em; color:var(--brass); font-weight:500; margin:0 0 10px;}
+  .post-title{font-family:var(--serif); font-size:21px; font-weight:700; margin:0 0 10px; color:var(--ink);}
+  .post-excerpt{color:var(--ink-soft); margin:0; max-width:62ch; font-weight:300;}
+
+  /* ---- social / contact ---- */
+  .contact-grid{display:flex; flex-direction:column;}
+  .contact-row{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .contact-row:first-of-type{border-top:none; padding-top:0;}
+  .contact-label{width:120px; flex-shrink:0; color:var(--ink-faint); font-size:14px;}
+  .contact-value a{font-weight:400; color:var(--ink);}
+  .contact-value a:hover{color:var(--brass);}
+
+  footer{
+    padding:50px 0;
+    text-align:center;
+    color:var(--ink-faint);
+    font-size:13px;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:560px){
+    .topbar-inner{flex-direction:column; gap:14px; padding:18px 24px;}
+    header.hero{padding:80px 0 64px;}
+    section{padding:54px 0;}
+    .edu-item{flex-direction:column; gap:4px;}
+    .contact-row{flex-direction:column; gap:6px;}
+    .contact-label{width:auto;}
+    .role .dot{margin:0 6px;}
+    nav.tabs{gap:18px; font-size:13px; flex-wrap:wrap; justify-content:center;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">امیرمحمد امامی</div>
+    <nav class="tabs">
+      <a href="#about">درباره من</a>
+      <a href="#education">تحصیلات</a>
+      <a href="#blog">یادداشت‌ها</a>
+      <a href="#contact">تماس</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow-line"></div>
+    <h1 class="name">امیرمحمد امامی</h1>
+    <p class="role">دانشجوی مدیریت مالی<span class="dot">·</span>علاقه‌مند به بازارهای مالی و سرمایه‌گذاری</p>
+  </header>
+
+  <section id="about" class="about">
+    <div class="section-head">
+      <h2 class="section-title">درباره من</h2>
+    </div>
+    <p>من <strong>امیرمحمد امامی</strong> هستم، دانشجوی رشته‌ی مدیریت مالی. علاقه‌مند به تحلیل بازارهای مالی، مدیریت سرمایه‌گذاری و یادگیری ابزارهایی هستم که به فهم بهتر تصمیم‌های مالی کمک می‌کنند.</p>
+    <p>این سایت را ساخته‌ام تا یادداشت‌ها و برداشت‌هایم را از آنچه می‌خوانم و یاد می‌گیرم، جایی برای نوشتن داشته باشم؛ هم برای مرور دوباره‌ی خودم، هم برای کسانی که مسیر مشابهی را دنبال می‌کنند.</p>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <h2 class="section-title">تحصیلات و مهارت‌ها</h2>
+    </div>
+    <div class="edu-item">
+      <span class="what">دانشجوی کارشناسی مدیریت مالی</span>
+      <span class="when">در حال تحصیل</span>
+    </div>
+    <div class="skills">
+      <span class="skill">تحلیل مالی</span>
+      <span class="skill">کریپتو</span>
+      <span class="skill">تحلیل بازار سرمایه</span>
+      <span class="skill">مدیریت پورتفولیو</span>
+      <span class="skill">اقتصاد خرد و کلان</span>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="section-head">
+      <h2 class="section-title">یادداشت‌ها</h2>
+    </div>
+
+    <article class="post">
+      <p class="post-date">اولین یادداشت</p>
+      <h3 class="post-title"><a href="#">هدفم از ساخت این سایت چه بود</a></h3>
+      <p class="post-excerpt">این سایت را ساختم تا آموخته‌ها، ایده‌ها و یادداشت‌هایم را در مسیر شناخت اقتصاد و بازارهای مالی ثبت کنم؛ جایی برای جمع‌آوری آنچه می‌آموزم، آنچه تجربه می‌کنم و آنچه درباره آینده می‌اندیشم. شاید این نوشته‌ها در گذر زمان تغییر کنند، اما قرار است تصویری از مسیر یادگیری و رشد فکری من باشند.</p>
+    </article>
+
+  </section>
+
+  <section id="social">
+    <div class="section-head">
+      <h2 class="section-title">شبکه‌های اجتماعی</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-row">
+        <span class="contact-label">اینستاگرام</span>
+        <span class="contact-value"><a href="https://instagram.com/amirmamad.e5" target="_blank" rel="noopener">amirmamad.e5</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">تلگرام</span>
+        <span class="contact-value"><a href="https://t.me/AMDE07" target="_blank" rel="noopener">AMDE07@</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <h2 class="section-title">راه‌های ارتباطی</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-row">
+        <span class="contact-label">ایمیل</span>
+        <span class="contact-value"><a href="mailto:emamiamir189@gmail.com">emamiamir189@gmail.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">استان</span>
+        <span class="contact-value">یزد</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">شهر</span>
+        <span class="contact-value">میبد</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  امیرمحمد امامی
+</footer>
+
+</body>
+</html>
